@@ -1,0 +1,18 @@
+
+# Update path for tensorflow
+export LIBRARY_PATH=$LIBRARY_PATH:/Users/mtlash/cuda/lib64
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/Users/mtlash/cuda/lib64
+export CPATH=$CPATH:/Users/mtlash/cuda/include
+export C_INCLUDE_PATH=$C_INCLUDE_PATH:/Users/mtlash/cuda/include/
+
+
+# Load necessary modules
+module load cuda/8.0.61
+module load python/2.7.13_parallel_studio-2017.1
+
+# Activate the virtualenv
+#source ~/tensorflow/bin/activate
+
+#Now we will use python to execute the script
+#python2 -c "import sys; sys.path.insert(0,'/Users/mtlash/tensorflow'); sys.path.insert(0,'/Users/mtlash/GeoProj/code'); from experiment_one_nogeo import main; main()"
+python2 -c "import sys,os; sys.path.insert(0,'/Users/mtlash/Cause/Prophit/code/scripts/'); from bench_linLambda_prob_plot import main; main()"
