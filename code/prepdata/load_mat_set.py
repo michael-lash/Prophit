@@ -8,7 +8,7 @@ def loadMatSet(matfile):
 	-- matFile: the matlab file to be loaded
 	'''
 
-	matContents = sio.loadmat('octave_a.mat')
+	matContents = sio.loadmat(matfile)
 	return matContents
 	
 def makeSetFromRaw(csvfile,changeableInd,indirectlyInd,unchangeableInd,costs,directions,directionDependsInd,savefile=None):
@@ -66,6 +66,6 @@ def makeSetFromRaw(csvfile,changeableInd,indirectlyInd,unchangeableInd,costs,dir
 
 	#Save if specified
 	if savefile != None:
-        with open(savefile, 'w') as f:
-        	pickle.dump(dataset, f)
+        	with open(savefile, 'w') as f:
+        		pickle.dump(dataset, f)
 	return dataset
