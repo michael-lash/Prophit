@@ -1,0 +1,2 @@
+model_checkpoint_path: "/Users/mtlash/Cause/Prophit/model/Cause/D1/CausecvModelD1Bench.ckpt"
+all_model_checkpoint_paths: "/Users/mtlash/Cause/Prophit/model/Cause/D1/CausecvModelD1Bench.ckpt"
